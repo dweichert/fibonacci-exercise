@@ -1,19 +1,9 @@
 <?php
 
 function fibo($n) {
-    switch ($n)
-    {
-        case 0:
-            return 0;
-        case 1:
-            return 1;
-        default:
-            return fibo($n-1) + fibo($n-2);
-    }
+    return 2>$n ? $n : fibo($n-1) + fibo($n-2);
 }
 
-$i = 0;
-while ($i < 20)
-{
+for ($i = 0; $i < 20; $i++) {
     echo fibo($i++) . "\n";
 }
